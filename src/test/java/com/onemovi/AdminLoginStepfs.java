@@ -3,12 +3,16 @@ package com.onemovi;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import com.AdminLoginPage;
 import com.onemovi.config.ConfigManager;
 import com.onemovi.utl.SharedDriver;
 
 import cucumber.api.PendingException;
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
 import cucumber.api.java.zh_cn.*;
 
 
@@ -48,7 +52,7 @@ public class AdminLoginStepfs {
    public void 输入用户及密码_点登录时() throws Throwable {
        // Write code here that turns the phrase above into concrete actions
        //throw new PendingException();
-	   this.adminloginpage.adminLogin("t-qiaohu-00001", "123456");
+	   this.adminloginpage.adminLogin("t-qiaohu-00001", "12345");
 	   
    }
 
@@ -59,5 +63,5 @@ public class AdminLoginStepfs {
 	   Thread.sleep(3000);
 	   Assert.assertEquals("校园电视台管理--基本设置", driver.getTitle());
    }
-
+ 
 }

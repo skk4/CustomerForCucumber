@@ -12,14 +12,14 @@ import com.onemovi.utl.SharedDriver;
 import cucumber.api.PendingException;
 import cucumber.api.java.zh_cn.*;
 
-public class AddDepartmentStepfs {
+public class DepartmentStepfs {
 	
 	 private final WebDriver driver;
 	 private final ConfigManager config;
 	 private final AdminLoginPage adminloginpage;
 	 private final DepartmentPage departmentpage;
 	 private static String baseUrl;
-     public AddDepartmentStepfs(SharedDriver driver, ConfigManager config, AdminLoginPage adminloginpage, DepartmentPage departmentpage) {  
+     public DepartmentStepfs(SharedDriver driver, ConfigManager config, AdminLoginPage adminloginpage, DepartmentPage departmentpage) {  
 	       this.driver = driver;  
 	       this.config = config;  
 	       this.adminloginpage = adminloginpage; 

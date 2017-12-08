@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import com.AdminLoginPage;
 import com.ClassManagePage;
 import com.onemovi.config.ConfigManager;
+import com.onemovi.utl.MouseMove;
 import com.onemovi.utl.SharedDriver;
 
 import cucumber.api.PendingException;
@@ -15,12 +16,14 @@ public class ClassStepfs {
 	private final ConfigManager config;
 	private final AdminLoginPage adminloginpage;
 	private final ClassManagePage classmanagepage;
+	private final MouseMove mousemove;
 	private String baseUrl;
-	public ClassStepfs(SharedDriver driver, ConfigManager config, AdminLoginPage adminloginpage, ClassManagePage classmanagepage){
+	public ClassStepfs(SharedDriver driver, ConfigManager config, AdminLoginPage adminloginpage, ClassManagePage classmanagepage, MouseMove mousemove){
 		this.driver=driver;
 		this.config=config;
 		this.adminloginpage=adminloginpage;
 		this.classmanagepage=classmanagepage;
+		this.mousemove=mousemove;
 		
 	}
 	
@@ -36,7 +39,30 @@ public class ClassStepfs {
 		Thread.sleep(3000);
 		this.classmanagepage.classManage();
 		Thread.sleep(3000);
+		this.classmanagepage.importStudent();
+		Thread.sleep(3000);
+		this.classmanagepage.uploadStudent();
+		Thread.sleep(3000);
+		/*
+		this.mousemove.MouseToElement(this.classmanagepage.ElementGradTwo);
+		Thread.sleep(3000);
+		this.mousemove.MouseToElement(this.classmanagepage.ElementGradTwotoo);
+		Thread.sleep(3000);
+		this.classmanagepage.editGrade();
+		Thread.sleep(10000);
+		this.classmanagepage.saveGrade();
+		Thread.sleep(3000);
+		this.classmanagepage.addClass();
+		*/
+		//this.classmanagepage.mouseToElement();
+		/*
 		this.classmanagepage.addPeriod();
+		Thread.sleep(3000);
+		this.classmanagepage.inputGrade("计算机系");
+		Thread.sleep(3000);
+		this.classmanagepage.saveGrade();
+		Thread.sleep(3000);
+		*/
 		Thread.sleep(3000);
 		
 	}

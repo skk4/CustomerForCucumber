@@ -151,6 +151,7 @@ public class MemberPage {
 		  
 	}
 	
+	//编辑目标部门
 	public void editGoalDept(String department){
 		List<WebElement> wes=ElementSecondLevelDepts;
 		WebElement target=null;
@@ -163,6 +164,7 @@ public class MemberPage {
 		target.findElement(By.xpath("./../../span/span[2]/a[2][@class='doEdit']")).click();
 	}
 	
+	//是否在职
 	public void isJob(){
 		WebDriverWait wait = new WebDriverWait(driver,30);
         wait.until(ExpectedConditions.elementToBeClickable(ElementIsOrOn));
